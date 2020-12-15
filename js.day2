@@ -1,0 +1,46 @@
+var myString = "Asia Developer Academy";
+
+console.log(myString.length);
+console.log(myString.toUpperCase());
+console.log(myString.charAt(6));
+console.log(myString.indexOf('ev'));
+console.log(myString.lastIndexOf('e'));
+console.log(myString.substring(5,14));
+console.log(myString.split(" "));
+
+
+function findLongestWordLength(str){
+  var max = 0
+  var stringArray = str.split(" ");
+  for (var i = 0; i < stringArray.length; i++){
+    if (stringArray[i].length > max){
+      max = stringArray[i].length;
+    }
+  }
+  return max;
+}
+console.log(findLongestWordLength(myString));
+
+function reverseString(str) {
+  var answer = "";
+  for (var i = 0; i< str.length; i++){
+    answer += str.charAt(str.length - i - 1);
+  }
+  
+  return answer;
+}
+console.log(reverseString("hello"));
+
+
+var number = 12.3456
+
+console.log(number.toPrecision(3));
+console.log(number.toFixed(3));
+
+console.log(Math.ceil(number));
+console.log(Math.floor(number));
+console.log(Math.round(number));
+
+console.log(Math.random());
+
+console.log(Math.ceil(Math.random()*100));
